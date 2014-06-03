@@ -1,0 +1,253 @@
+*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF); }
+
+html, body{
+    height:89%;
+    margin:0;
+    padding:0;
+    background:url('../images/spacebg.jpg');
+    background-size:cover;
+    width:100%;
+    font-family:'helvetica';
+    padding-top:4%;
+}
+
+#topmenu{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100px;
+    color:#fff;
+}
+
+#logo{
+    position:absolute;
+    top:7px;
+    left:10px;
+}
+
+#topstats{
+    width:100%;
+    height:50px;
+    background:#000;
+}
+
+#topsubmenu{
+    width:100%;
+    height:50px;
+    background:#000;
+}
+
+.line{
+    width:100%;
+    height:2px;
+}
+
+#statscontainer{
+    line-height:50px;
+    font-size:16px;
+    text-align:center;
+}
+
+#statistics ul:last-child{
+    padding:0;
+    margin:0;
+}
+
+#statistics ul{
+    display:inline-block;
+    padding:0 15px 0 0px;
+    margin:0;
+}
+
+.progressbar{
+    width:100px;
+    height:2px;
+    vertical-align:top;
+    background:#fff;
+    margin-top:-5px;
+}
+
+.fill{
+    width:100%;
+    height:2px;
+}
+
+.red{
+    background:#C20000;
+}
+
+.green{
+    background:#00FF00;
+}
+
+.yellow{
+    background:#FFFF00;
+}
+
+#submenucontainer{
+    line-height:50px;
+    font-size:16px;
+    text-align:center;
+}
+
+#submenu ul:last-child{
+    padding:0;
+    margin:0;
+}
+
+#submenu ul{
+    display:inline-block;
+    padding:0 25px 0 0px;
+    margin:0;
+}
+
+#submenu a{
+    cursor:pointer;
+    text-decoration:none;
+    color:#ccc;
+}
+
+#submenu a:hover{
+    color:#fff;
+}
+
+#leftsidebar{
+    position:fixed;
+    top:20%;
+    left:3%;
+    width:14%;
+    min-width:150px;
+    text-align:center;
+    padding-top:20px;
+    padding-bottom:15px;
+    background:rgba(160,160,160,0.3);
+    border-radius:20px;
+    -moz-box-shadow:    inset 0 0 20px #00FF00;
+   -webkit-box-shadow: inset 0 0 20px #00FF00;
+   box-shadow:         inset 0 0 20px #00FF00;
+}
+
+.menuitem{
+    display:inline-block;
+    width:110px;
+    padding-left:10px;
+    height:30px;
+    background:#000;
+    vertical-align:top;
+    color:#fff;
+    line-height:30px;
+    cursor:pointer;
+    text-align:left;
+}
+
+.menuitemend{
+    display:inline-block;
+    width:0;
+    height:0;
+    border-right:25px solid transparent;
+    border-top:30px solid #000;
+    cursor:pointer;
+}
+
+.menuitem a{
+    text-decoration:none;
+    color:#fff;
+}
+
+
+#mainwindow{
+    width:60%;
+    margin-bottom:20px;
+    background:rgba(160,160,160,0.3);
+    border-radius:20px;
+    -moz-box-shadow:    inset 0 0 20px #00FF00;
+   -webkit-box-shadow: inset 0 0 20px #00FF00;
+   box-shadow:         inset 0 0 20px #00FF00;
+   margin-top:26px;
+   margin-left:20%;
+}
+
+#rightsidebar{
+    position:fixed;
+    top:20%;
+    right:3%;
+    width:14%;
+    height:300px;
+    min-width:150px;
+    text-align:center;
+    padding-top:20px;
+    padding-bottom:15px;
+    background:rgba(160,160,160,0.3);
+    border-radius:20px;
+    -moz-box-shadow:    inset 0 0 20px #00FF00;
+   -webkit-box-shadow: inset 0 0 20px #00FF00;
+   box-shadow:         inset 0 0 20px #00FF00;
+}
+
+.menuitemcontainer:hover .menuitem{
+    background:#00FF00;
+}
+
+.menuitemcontainer:hover .menuitemend{
+    border-top:30px solid #00FF00;
+}
+
+#contacthead{
+    width:100%;
+    text-align:center;
+    padding-top:10px;
+}
+
+.blackinput{
+    -moz-box-shadow:    inset 0 0 10px #00FF00;
+   -webkit-box-shadow: inset 0 0 10px #00FF00;
+   box-shadow:         inset 0 0 10px #00FF00;
+   width:250px;
+   height:20px;
+   background:#000;
+   border:none;
+   padding-left:10px;
+   color:#fff;
+   border-radius:5px;
+}
+
+.blacktextarea{
+    -moz-box-shadow:    inset 0 0 10px #00FF00;
+   -webkit-box-shadow: inset 0 0 10px #00FF00;
+   box-shadow:         inset 0 0 10px #00FF00;
+   width:250px;
+   height:100px;
+   background:#000;
+   border:none;
+   padding-left:10px;
+   color:#fff;
+   border-radius:5px;    
+}
+
+.blacksend{
+    background:url('../images/send.png');
+    border:0;
+    width:122px;
+    height:26px;
+}
+
+.contacttable{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:4%;
+}
+
+.contacttable td{
+    padding-bottom:10px;
+}
+
+.contacttable tr td:first-child{
+    padding-right:30px;
+}
+
+.contacttable tr:last-child td{
+    text-align:center;
+    padding-top:10px;
+}
+
