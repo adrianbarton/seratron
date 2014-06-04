@@ -229,7 +229,7 @@ body{
 
 #leftcolumn{
     vertical-align:top;
-    height:341px;
+    height:337px;
 }
 
 #logincolumn{
@@ -240,14 +240,14 @@ body{
 .logintable{
     display:inline-block;
     vertical-align:top;
-    margin-top: 30px;
+    margin-top: 34px;
 }
 
 #loginbut{
     display:inline-block;
     background:url('/images/outer-circle.png');
-    height:119px;
-    width:116px;
-    margin-left:35px;
+    height:129px;
+    width:127px;
+    margin-left:30px;
 }
 
