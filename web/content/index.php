@@ -1,10 +1,13 @@
-<?php include'modules/header.php' ?>
+<?php 
+include'modules/header.php'; 
+
+?>
 
 <div class="container">
     
     <div id="mainwindow">
-
         
+
 
     </div>
     
