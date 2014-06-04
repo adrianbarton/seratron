@@ -21,19 +21,21 @@
             </tr>
             
             <tr>
-                <td>ENERGY</td>
-                <td><div class="bar"><div class="energyfill"></div></div></td>
-            </tr>
-            
-            <tr>
                 <td>FUEL</td>
                 <td><div class="bar"><div class="fuelfill"></div></div></td>
             </tr>
             
             <tr>
-                <td>HEALTH</td>
+                <td>SHIELD</td>
                 <td><div class="bar"><div class="healthfill"></div></div></td>
             </tr>
+            
+            <tr>
+                <td>ENERGY</td>
+                <td><div class="bar"><div class="energyfill"></div></div></td>
+            </tr>
+            
+            
             
         </table>
         
