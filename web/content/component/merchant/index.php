@@ -7,9 +7,10 @@ include'../../modules/header.php'
 <div id="mainwindow">
 
 <?php 
-$db = new readtable("seratron", "users");
-$result = $db->values("id", "1");
-var_dump($result);
+$r_table = new readtable("seratron", "users");
+$result = $r_table->values("id", "1");
+
+echo $result['id'];
 ?>
 
 

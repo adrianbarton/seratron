@@ -10,6 +10,7 @@ class db {
     public $database;
     public $connect;
     public $table;
+    public $selected;
 
     public function __construct($database, $table) {
 
@@ -29,34 +30,29 @@ class db {
         if (!$this->connect) {
             exit('Error: could not establish database connection');
         }
-
         $this->database = $database;
-        if (!mysql_select_db($this->database)) {
-            exit('Error: could not select the database');
+        $this->table = $table;
+
+        $this->selected = mysqli_select_db($this->connect, $this->database);
+        if (!$this->selected) {
+            echo mysql_error();
         } else {
-            return TRUE;
+            
         }
-         
     }
-   
-
 }
-
 class readtable extends db {
-    
+
     public $query;
-    
-    
+    public $result;
+
     public function values($id, $value) {
-        
-        $this->query = "SELECT * FROM '" . $this->table . "' WHERE '" . $id . "='" . $value . "'";
-        
+
+        $this->query = "SELECT * FROM `" . $this->table . "` WHERE `" . $id . "` = '" . $value . "'";
         $result = mysqli_query($this->connect, $this->query);
-        var_dump($result);
-
-        
+        while ($row = mysqli_fetch_array($result)) {
+            return $row;
+        }
     }
-
 }
-
 ?>
