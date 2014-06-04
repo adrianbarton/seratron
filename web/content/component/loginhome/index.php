@@ -1,6 +1,6 @@
 <?php include'../../modules/header.php' ?>
 
-<div class="container">
+<div id="container">
 
     <?php include'../../modules/leftsidebar.php'?><div id="mainwindow">
 
