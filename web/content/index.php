@@ -3,15 +3,12 @@ include'modules/header.php';
 
 ?>
 
-<div class="container">
     
-    <div id="mainwindow">
+    <div id="homemainwindow">
         
-
+            <di
 
     </div>
-    
-</div>
 
 </body>
 
