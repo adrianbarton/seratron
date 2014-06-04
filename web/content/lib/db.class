@@ -1,5 +1,7 @@
 <?php
 
+require_once "constants.php";
+
 class db {
     
     private $server;
@@ -8,12 +10,26 @@ class db {
     private $database;
     private $table;
     
-    function __construct($database,$table){
+    
+    
+    function __construct($database){
+        
+        if(URL == "seratron.co.uk"){
+        
         $this->server = 'cust-mysql-123-19';
         $this->username = 'seratron';
         $this->password = '1989password!';
         $this->database;
-        $this->table; 
+        
+        }else{
+            
+        $this->server = 'localhost';
+        $this->username = 'root';
+        $this->password = '!';
+        $this->database;
+       
+        }
+        
         
     }
     
