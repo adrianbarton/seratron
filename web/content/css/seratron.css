@@ -72,7 +72,7 @@ body{
 #homemainwindow{
     width:800px;
     height:500px;
-    background:url('/images/center.png');
+    background:url('/images/home-center.png');
     background-size:100% 100%;
     background-repeat:no-repeat;
     margin-top: 60px;
@@ -229,13 +229,25 @@ body{
 
 #leftcolumn{
     vertical-align:top;
-    height:367px;
+    height:341px;
 }
 
 #logincolumn{
     color:#FFF;
-    margin-left:auto;
-    margin-right:70px;
-    width:396px;
+    width:450px;
+    margin-left:333px;
+}
+.logintable{
+    display:inline-block;
+    vertical-align:top;
+    margin-top: 30px;
+}
+
+#loginbut{
+    display:inline-block;
+    background:url('/images/outer-circle.png');
+    height:119px;
+    width:116px;
+    margin-left:35px;
 }
 

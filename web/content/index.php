@@ -12,7 +12,7 @@ include'modules/header.php';
             
         </div><div id="logincolumn">
             
-                <table>
+                <table class="logintable">
                     
                     <tr>
                         
@@ -29,6 +29,12 @@ include'modules/header.php';
                     </tr>
                     
                 </table>
+            
+            <div id="loginbut">
+                
+                
+                
+            </div>
 
     </div>
 
