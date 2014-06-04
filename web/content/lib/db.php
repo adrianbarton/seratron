@@ -4,14 +4,14 @@ require_once "constants.php";
 
 class db {
 
-    private $server;
-    private $username;
-    private $password;
-    private $database;
+    public $server;
+    public $username;
+    public $password;
+    public $database;
     public $connect;
     public $table;
 
-    function __construct($database, $table) {
+    public function __construct($database, $table) {
 
         if (URL == "seratron.co.uk") {
 
@@ -24,7 +24,7 @@ class db {
             $this->username = 'root';
             $this->password = '';
         }
-        $this->connect = mysql_connect($this->server, $this->username, $this->password);
+        $this->connect = mysqli_connect($this->server, $this->username, $this->password);
 
         if (!$this->connect) {
             exit('Error: could not establish database connection');
@@ -36,7 +36,9 @@ class db {
         } else {
             return TRUE;
         }
+         
     }
+   
 
 }
 
@@ -44,10 +46,13 @@ class readtable extends db {
     
     public $query;
     
-
+    
     public function values($id, $value) {
-
-        $this->query = mysqli_query($this->connect, "SELECT * FROM '" . $this->table . "' WHERE '" . $id . "='" . $value . "'");
+        
+        $this->query = "SELECT * FROM '" . $this->table . "' WHERE '" . $id . "='" . $value . "'";
+        
+        $result = mysqli_query($this->connect, $this->query);
+        var_dump($result);
 
         
     }
