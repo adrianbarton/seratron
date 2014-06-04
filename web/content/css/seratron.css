@@ -72,8 +72,9 @@ body{
     background:url('/images/center.png');
     background-size:100% 100%;
     background-repeat:no-repeat;
-   display:inline-block;
-   margin-top: 60px;
+    display:inline-block;
+    margin-top: 60px;
+    margin-left:-18px
 }
 
 #homemainwindow{
@@ -125,10 +126,23 @@ body{
 
 #leftsidebar{
    display:inline-block;
-   width:25%;
    padding-top:20px;
    padding-bottom:20px;
    vertical-align:top;
+}
+
+#rightsidebar{
+    display:inline-block;
+    width:220px;
+    height:182px;
+    padding-top:20px;
+    padding-bottom:20px;
+    vertical-align:top;
+    position:relative;
+    background:url('/images/right-menu.png');
+    background-size:100% 100%;
+    margin-left: -103px;
+    margin-top: 154px;  
 }
 
 #avatar{

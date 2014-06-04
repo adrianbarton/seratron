@@ -2,13 +2,11 @@
 
 <div class="container">
 
-    <?php include'../../modules/leftsidebar.php'?>
-    
-    <div id="mainwindow">
+    <?php include'../../modules/leftsidebar.php'?><div id="mainwindow">
 
         
 
-    </div>
+    </div><?php include'../../modules/rightsidebar.php'?>
     
 </div>
 
