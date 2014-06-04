@@ -1,13 +1,20 @@
-<?php include'../../modules/header.php' ?>
-
+<?php include '../../lib/db.php';
+include'../../modules/header.php'
+?>
 <?php include'../../modules/fixedmenutop.php' ?>
-
 <?php include'../../modules/leftsidebar.php' ?>
 
 <div id="mainwindow">
-    
-    
-    
+
+<?php 
+$db = new readtable("seratron", "users");
+$result = $db->values("id", "1");
+var_dump($result);
+?>
+
+
+
+
 </div>
 
 <?php include'../../modules/rightsidebar.php' ?>
