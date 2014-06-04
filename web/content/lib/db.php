@@ -41,15 +41,15 @@ class db {
 }
 
 class readtable extends db {
+    
+    public $query;
+    
 
     public function values($id, $value) {
 
-        $query = mysqli_query($this->connect, "SELECT * FROM '" . $this->table . "' WHERE '" . $id . "='" . $value . "'");
+        $this->query = mysqli_query($this->connect, "SELECT * FROM '" . $this->table . "' WHERE '" . $id . "='" . $value . "'");
 
-        while ($row = mysqli_fetch_array($query)) {
-            echo $row['id'] . " " . $row['value'];
-            echo "<br>";
-        }
+        
     }
 
 }
