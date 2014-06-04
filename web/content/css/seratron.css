@@ -76,49 +76,34 @@ body{
    margin-top: 60px;
 }
 
+#homemainwindow{
+    width:800px;
+    height:500px;
+    background:url('/images/center.png');
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    margin-top: 60px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
 #contacthead{
     width:100%;
     text-align:center;
     padding-top:10px;
 }
 
-.blackinput{
-    -moz-box-shadow:    inset 0 0 10px #00FF00;
-   -webkit-box-shadow: inset 0 0 10px #00FF00;
-   box-shadow:         inset 0 0 10px #00FF00;
-   width:250px;
-   height:20px;
-   background:#000;
-   border:none;
-   padding-left:10px;
-   color:#fff;
-   border-radius:5px;
-}
-
-.blacktextarea{
-    -moz-box-shadow:    inset 0 0 10px #00FF00;
-   -webkit-box-shadow: inset 0 0 10px #00FF00;
-   box-shadow:         inset 0 0 10px #00FF00;
-   width:250px;
-   height:100px;
-   background:#000;
-   border:none;
-   padding-left:10px;
-   color:#fff;
-   border-radius:5px;    
-}
-
-.blacksend{
-    background:url('../images/send.png');
-    border:0;
-    width:122px;
-    height:26px;
-}
-
 .contacttable{
     margin-left:auto;
     margin-right:auto;
     margin-top:4%;
+}
+
+.registertable{
+    margin-left:auto;
+    margin-right:auto;
+    color:#fff;
+    padding-top:100px;
 }
 
 .contacttable td{
