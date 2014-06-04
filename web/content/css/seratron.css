@@ -243,11 +243,40 @@ body{
     margin-top: 34px;
 }
 
-#loginbut{
+#login{
     display:inline-block;
+    position:relative;
+}
+
+#outercircle{
+    position:absolute;
     background:url('/images/outer-circle.png');
     height:129px;
     width:127px;
     margin-left:30px;
 }
+
+#middlecircle{
+    position:absolute;
+    background:url('/images/middle-circle.png');
+    height:96px;
+    width:99px;
+    margin-top: 16px;
+    margin-left: 14px
+}
+
+#innercircle{
+    position:absolute;
+    background:url('/images/inner-circle.png');
+    height:67px;
+    width:72px;
+    margin-top: 14px;
+    margin-left: 14px
+}
+
+#loginbut{
+    margin-top: 3px;
+    margin-left: 2px;
+}
+
 

@@ -24,6 +24,30 @@
                         $(login).attr("data-login", "deselected");
                     };
                 });
+                
+        $(function() {
+            var $elie = $("#outercircle"), degree = 0, timer;
+            rotate();
+            function rotate() {
+
+                  // For webkit browsers: e.g. Chrome
+                $elie.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});
+                  // For Mozilla browser: e.g. Firefox
+                $elie.css({ '-moz-transform': 'rotate(' + degree + 'deg)'});
+
+                  // Animate rotation with a recursive call
+                timer = setTimeout(function() {
+                    ++degree; rotate();
+                },10);
+            }
+
+              // Toggle rotation on and off
+            $("#login").hover(function() {
+                clearTimeout(timer);
+            }, function() {
+                rotate();
+            });
+        });
         
     });
     
