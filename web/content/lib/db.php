@@ -8,7 +8,8 @@ class db {
     private $username;
     private $password;
     private $database;
-    private $connect;
+    public $connect;
+    public $table;
 
     function __construct($database, $table) {
 
