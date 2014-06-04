@@ -8,28 +8,30 @@ include'../../modules/header.php';
         
             <table class="registertable">
         
-        <tr>
-            
-            <td>NAME :</td>
-            <td><input type="text" placeholder="enter name here..."/></td>
-            
-        </tr>
+        
+        
         <tr>
             
             <td>USERNAME :</td>
-            <td><input type="text" placeholder="enter username here..."/></td>
+            <td><input type="text" /></td>
             
         </tr>
         <tr>
             
             <td>EMAIL :</td>
-            <td><input type="text" placeholder="enter email here..."/></td>
+            <td><input type="text" /></td>
             
         </tr>
         <tr>
             
-            <td style="vertical-align:top;">MESSAGE :</td>
-            <td><textarea placeholder="enter message here..."></textarea></td>
+            <td >PASSWORD :</td>
+            <td><input type="password" /></td>
+            
+        </tr>
+        <tr>
+            
+            <td >CONFIRM PASSWORD :</td>
+            <td><input type="password" /></td>
             
         </tr>
         <tr>
