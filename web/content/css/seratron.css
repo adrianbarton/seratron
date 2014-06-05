@@ -20,24 +20,6 @@ body{
     min-width:1300px;
 }
 
-#loginmodal{
-    background:rgba(0,0,0,0.8);
-    height:100%;
-    width:100%;
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:20;
-}
-
-.hidden{
-    display:none;
-}
-
-#loginhead{
-    margin-bottom:10px;
-}
-
 #loginbox table{
     margin-right:auto;
     margin-left:auto;
@@ -251,32 +233,52 @@ body{
 #outercircle{
     position:absolute;
     background:url('/images/outer-circle.png');
+    background-size:cover;
     height:129px;
-    width:127px;
-    margin-left:30px;
+    width:129px;
+    left: 30px;
+    top: -19px;
 }
 
 #middlecircle{
     position:absolute;
     background:url('/images/middle-circle.png');
-    height:96px;
+    background-size:cover;
+    height:99px;
     width:99px;
-    margin-top: 16px;
-    margin-left: 14px
+    top: -4px;
+    left: 44px;
 }
 
 #innercircle{
     position:absolute;
     background:url('/images/inner-circle.png');
-    height:67px;
-    width:72px;
-    margin-top: 14px;
-    margin-left: 14px
+    background-size:cover;
+    height:70px;
+    width:70px;
+    top: 11px;
+    left: 59px;
 }
 
 #loginbut{
-    margin-top: 3px;
-    margin-left: 2px;
+    position:absolute;
+    top: 14px;
+    left: 64px;
+}
+
+.loginbut{
+    text-decoration:none;
+    border:none;
+    width:60px;
+    height:60px;
+    background:none;
+    color:#05d4f3;
+    font-weight:bold;
+}
+
+#logincolumn input{
+    background:rgba(160,160,160,0.4);
+    color:#05d4f3
 }
 
 

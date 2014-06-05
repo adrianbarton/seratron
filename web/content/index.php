@@ -50,6 +50,12 @@ include'modules/header.php';
                         
                     </div>
                 
+                <div id="loginbut">
+                    
+                    <input class="loginbut" type="submit" name="login" value="LOGIN"/>
+                    
+                </div>
+                
                 
                 
             </div>
