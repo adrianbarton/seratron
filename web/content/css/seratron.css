@@ -262,23 +262,30 @@ body{
 
 #loginbut{
     position:absolute;
-    top: 14px;
-    left: 64px;
+    top: 17px;
+    left: 66px;
 }
 
 .loginbut{
     text-decoration:none;
     border:none;
-    width:60px;
-    height:60px;
+    width:56px;
+    height:56px;
     background:none;
     color:#05d4f3;
     font-weight:bold;
+    border-radius:60px;
 }
 
-#logincolumn input{
+.logintable input{
     background:rgba(160,160,160,0.4);
-    color:#05d4f3
+    color:#fff;
+    border:none;
+    -moz-box-shadow:    inset 0 0 10px #05d4f3;
+    -webkit-box-shadow: inset 0 0 10px #05d4f3;
+    box-shadow:         inset 0 0 10px #05d4f3;
+    padding-left:8px;
+   
 }
 
 
