@@ -1,5 +1,5 @@
 <?php include '../../lib/db.php';
-include'../../modules/header.php'
+include'../../modules/header.php';
 ?>
 <?php include'../../modules/fixedmenutop.php' ?>
 <?php include'../../modules/leftsidebar.php' ?>
