@@ -11,14 +11,12 @@ $(document).ready(function() {
             $('#passwordMatchCheck').removeClass()
             $('#passwordMatchCheck').addClass('match')
             return 'Passwords Match'
-            
         }
         else
             {
                 $('#passwordMatchCheck').removeClass()
                 $('#passwordMatchCheck').addClass('nomatch')
                 return 'Passwords Do Not Match'
-                
             }
     }
 
