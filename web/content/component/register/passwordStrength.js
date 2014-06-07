@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     $('#password').keyup(function()
     {
-        $('#result').html(checkStrength($('#password').val()))
+        $('#passwordStrengthCheck').html(checkStrength($('#password').val()))
     })
 
     function checkStrength(password)
@@ -10,8 +10,8 @@ $(document).ready(function() {
         var strength = 0;
 
         if (password.length < 6) {
-            $('#result').removeClass()
-            $('#result').addClass('short')
+            $('#passwordStrengthCheck').removeClass()
+            $('#passwordStrenghtCheck').addClass('short')
             return 'Too short'
         }
 
@@ -33,20 +33,20 @@ $(document).ready(function() {
 
         if (strength < 2)
             {
-                $('#result').removeClass()
-                $('#result').addClass('weak')
+                $('#passwordStrengthCheck').removeClass()
+                $('#passwordStrengthCheck').addClass('weak')
                 return 'Weak'
             }
         else if (strength == 2)
             {
-                $('#result').removeClass()
-                $('#result').addClass('good')
+                $('#passwordStrengthCheck').removeClass()
+                $('#passwordStrengthCheck').addClass('good')
                 return 'Good'
             }
         else
             {
-                $('#result').removeClass()
-                $('#result').addClass('strong')
+                $('#passwordStrengthCheck').removeClass()
+                $('#passwordStrengthCheck').addClass('strong')
                 return 'Strong'
             }
     }

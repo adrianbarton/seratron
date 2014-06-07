@@ -2,8 +2,10 @@
 include'../../modules/header.php';
 ?>
 
-<script type="text/javascript" src="../../js.jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+<script src="checkUsername.js"></script>
 <script src="passwordStrength.js"></script>
+<script src="passwordMatch.js"></script>
 <script src="ajax.js"></script> 
 
 
@@ -48,8 +50,9 @@ include'../../modules/header.php';
 
         </table>
     </form>
-    <div id="result" style="height: 200px; width: 200px; color:white; border:1px solid white;"></div>
-    <div id="result2" style="height: 200px; width: 200px; color:white; border:1px solid white;"></div>
+    <div id="usernameCheck" style="height: 200px; width: 200px; color:white; border:1px solid white;"></div>
+    <div id="passwordStrengthCheck" style="height: 200px; width: 200px; color:white; border:1px solid white;"></div>
+    <div id="passwordMatchCheck" style="height: 200px; width: 200px; color:white; border:1px solid white;"></div>
 </div>
 
 </body>
