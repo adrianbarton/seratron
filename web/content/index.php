@@ -12,18 +12,20 @@ include'modules/header.php';
             
         </div><div id="logincolumn">
             
+            
+            
                 <table class="logintable">
                     
                     <tr>
                         
-                        <td>USERNAME</td>
+                        <td>username :</td>
                         <td><input class="blackinput" type="text"/></td>
                         
                     </tr>
                     
                     <tr>
                         
-                        <td>PASSWORD</td>
+                        <td>password :</td>
                         <td><input class="blackinput" type="password"/></td>
                         
                     </tr>
@@ -59,9 +61,67 @@ include'modules/header.php';
                 
                 
             </div>
+            
+            <div id="register" data-reg="deselected">
+        
+                R<br/>E<br/>G<br/>I<br/>S<br/>T<br/>E<br/>R
+                
+                <div id="regformcontainer" class="hidden">
+                
+                    <div id="registerform">
+
+                        <form name="form" id="form" method="post">
+
+                            <table class="registertable">
+
+
+
+                                <tr>
+
+                                    <td>username :</td>
+                                    <td><input type="text" id="username" name="username"/></td>
+
+                                </tr>
+                                <tr>
+
+                                    <td>email :</td>
+                                    <td><input type="text" id="email" name="email" /></td>
+
+                                </tr>
+                                <tr>
+
+                                    <td >password :</td>
+                                    <td><input type="password" id="password" name="password"/></td>
+
+                                </tr>
+                                <tr>
+
+                                    <td >confirm password :</td>
+                                    <td><input type="password" id="confirm" name="confirm"/></td>
+
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td style="text-align:left;"><input id="submit" type="submit" name="submit" value="register"/></td>
+
+                                </tr>
+
+                            </table>   
+
+                        </form>
+
+                    </div>
+                    
+                </div>
+
+
+            </div> 
 
     </div>
+        
+    </div>
 
+     
 </body>
 
 </html>

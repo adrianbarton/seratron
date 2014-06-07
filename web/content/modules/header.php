@@ -17,13 +17,26 @@
 
                     if ($(login).attr("data-login") === "deselected") {
                         $(login).attr("data-login", "selected");
-                        $('#loginmodal').removeClass('hidden');
+                        $('#loginmodal').slideRight(5000);
 
                     } else {
                         $('.loginbut') .onclick($('#loginmodal').addClass('hidden'));
                         $(login).attr("data-login", "deselected");
                     };
                 });
+                 $(document).on("click", "#register", function() {
+
+                   reg = this;
+
+                    if ($(reg).attr("data-reg") === "deselected") {
+                        $(reg).attr("data-reg", "selected");
+                        $('#regformcontainer').removeClass('hidden');
+
+                    };
+                });
+                
+                
+                
                 
         $(function() {
             var $elie = $("#outercircle"), degree = 0, timer;
@@ -96,6 +109,8 @@
                 rotate(); 
             });**/
         });
+        
+        
         
     });
     
