@@ -66,7 +66,8 @@ include'modules/header.php';
         
                 R<br/>E<br/>G<br/>I<br/>S<br/>T<br/>E<br/>R
                 
-                <div id="regformcontainer" class="hidden">
+            </div>
+            <div id="regformcontainer" class="hidden">
                 
                     <div id="registerform">
 
@@ -113,9 +114,6 @@ include'modules/header.php';
                     </div>
                     
                 </div>
-
-
-            </div> 
 
     </div>
         

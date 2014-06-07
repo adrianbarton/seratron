@@ -17,7 +17,7 @@
 
                     if ($(login).attr("data-login") === "deselected") {
                         $(login).attr("data-login", "selected");
-                        $('#loginmodal').slideRight(5000);
+                        $('#loginmodal').removeClass('hidden');
 
                     } else {
                         $('.loginbut') .onclick($('#loginmodal').addClass('hidden'));
@@ -30,10 +30,15 @@
 
                     if ($(reg).attr("data-reg") === "deselected") {
                         $(reg).attr("data-reg", "selected");
-                        $('#regformcontainer').removeClass('hidden');
+                        $('#regformcontainer').show("slide");
 
+                    } else {
+                        $('#regformcontainer').hide("slide");
+                        $(reg).attr("data-reg", "deselected");
                     };
                 });
+        
+        
                 
                 
                 
