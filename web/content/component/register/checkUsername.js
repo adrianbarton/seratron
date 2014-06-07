@@ -12,9 +12,11 @@ $(document).ready(function(){
                         success:function(data){
                         if(data==0){
                             $("#usernameCheck").html("<img src='tick.png' /> Username available");
+                            
                         }
                         else{
                             $("#usernameCheck").html("<img src='cross.png' /> Username already taken");
+                            
                         }
                     }
                  });

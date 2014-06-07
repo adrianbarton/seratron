@@ -44,7 +44,7 @@ include'../../modules/header.php';
             </tr>
             <tr>
 
-                <td colspan="2" style="text-align:center; padding-top:30px;"><input id="submit" type="submit" name="submit"/></td>
+                <td colspan="2" style="text-align:center; padding-top:30px;"><input id="submit" type="submit" name="submit" disabled/></td>
 
             </tr>
 
