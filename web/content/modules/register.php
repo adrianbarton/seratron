@@ -35,7 +35,7 @@ if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['passwor
                 <tr>
 
                     <td>email :</td>
-                    <td><input type="text" id="email" name="email" /></td>
+                    <td><input type="email" id="email" name="email" /></td>
 
                 </tr>
                 <tr>
