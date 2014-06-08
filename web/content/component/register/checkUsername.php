@@ -8,6 +8,4 @@
   $result = $database->values(array('username'=>$username));
   $count = count($result);
  
-  echo $count;
-  
  ?>

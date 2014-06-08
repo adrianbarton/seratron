@@ -8,15 +8,13 @@ $(document).ready(function(){
               $.ajax({
                     type:"post",
                     url:"/component/register/checkUsername.php",
-                    data:"username="+username,
+                    data:username,
                         success:function(data){
-                        if(data==0){
-                            $("#usernameCheck").addClass("<img src='/images/tick.png' />");
-                            
+                        if(data !== NULL){
+                            $("#usernameCheck").html("<img src='/images/cross.png' />");
                         }
                         else{
-                            $("#usernameCheck").html("<img src='/images/cross.png' />");
-                            
+                            $("#usernameCheck").html("<img src='/images/tick.png' />");
                             
                         }
                         
