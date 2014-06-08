@@ -107,21 +107,17 @@ class update extends db {
         foreach ($array as $key => $value) {
 
             $this->keys = mysql_real_escape_string($key);
+            $this->value = mysql_real_escape_string($value);
 
-            $this->string = $key . ' = "' . $value . '"';
+            $this->array[] = $this->keys . ' = "' . $this->value . '"';
             
         }
-
-
         
-
-        //$string = implode(',', $array);
+        $this->string = implode(', ', $this->array);
 
         $this->query = "UPDATE  `" . $this->table . "` SET " . $this->string . " WHERE id = " . $id;
 
-        var_dump($this->query);
-
-        //$this->result = mysqli_query($this->connect, $this->query);
+        $this->result = mysqli_query($this->connect, $this->query);
     }
 
 }
