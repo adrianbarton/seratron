@@ -82,7 +82,6 @@ class read extends db {
             return $this->array;
         }
     }
-
 }
 
 class insert extends db {

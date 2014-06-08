@@ -1,10 +1,7 @@
-
-  
-
     $(document).ready(function() {
 
         function processForm(formId) {
-            $.post("ajax/login.php", $("#" + formId).serialize(), function(data) {
+            $.post("/ajax/login.php", $("#" + formId).serialize(), function(data) {
                 
                 if (typeof data.empty != "undefined") {
                     $("#message").html(data.empty);
