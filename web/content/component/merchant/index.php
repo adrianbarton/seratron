@@ -8,11 +8,10 @@ include'../../modules/header.php';
 <div id="mainwindow">
 
     <?php
-    $r_table = new read("seratron", "users");
-    $insert = $r_table->values(array("id"=>"1", "password"=>"password", "age"=> "1"));
+    $r_table = new update("seratron", "users");
+    $insert = $r_table->values("1", array("password"=>"pass", "age"=> "10"));
     
-    echo "ID is: ".$insert[0]['id'];
-    $count = count($insert);
+    
    
 
     ?>
