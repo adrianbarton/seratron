@@ -1,5 +1,5 @@
 <?php
- require_once '/lib/db.php';
+ require_once '../../lib/db.php';
  
  $database = new read('seratron', 'users');
  
@@ -7,8 +7,8 @@
   
   $result = $database->values('username', $username);
    
-  $find=mysql_num_rows($result);
+  $count = count($result);
  
-  echo $find;
+  echo $count;
   
 ?>

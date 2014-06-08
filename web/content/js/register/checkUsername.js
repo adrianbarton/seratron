@@ -1,21 +1,21 @@
 $(document).ready(function(){
             $("#username").change(function(){
-                 $("#usernameCheck").html("checking...");
+                 $("#usernameCheck").html("<img src='ajax-loader.gif' /> checking...");
              
  
             var username=$("#username").val();
  
               $.ajax({
                     type:"post",
-                    url:"/component/register/checkUsername.php",
+                    url:"checkUsername.php",
                     data:"username="+username,
                         success:function(data){
                         if(data==0){
-                            $("#usernameCheck").addClass("<img src='/images/tick.png' />");
+                            $("#usernameCheck").html("<img src='tick.png' /> Username available");
                             
                         }
                         else{
-                            $("#usernameCheck").html("<img src='/images/cross.png' />");
+                            $("#usernameCheck").html("<img src='cross.png' /> Username already taken");
                             
                         }
                     }
