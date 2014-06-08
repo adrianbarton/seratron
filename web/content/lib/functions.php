@@ -1,6 +1,8 @@
 <?php
 
-include 'db.php';
+$filepath = realpath (dirname(__FILE__));
+
+require_once($filepath."/db.php");
 
 
 //$db = new db();
@@ -46,6 +48,7 @@ class functions {
 
            $r_table = new read("seratron", "users");
            $result = $r_table->values(array("username" => $username, "password" => $password));
+           
 
             if ($result != NULL) {
                 session_start();
@@ -61,7 +64,7 @@ class functions {
                     ));
                         echo json_encode(array("valid"=>"true"));
             } else {
-                echo json_encode(array("invalid", "Invalid credentials"));
+                echo json_encode(array("invalid"=> "Invalid credentials"));
                 
             }
         }

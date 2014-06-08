@@ -9,7 +9,7 @@ include'../../modules/header.php';
 
     <?php
      $r_table = new read("seratron", "users");
-           $result = $r_table->values(array("username" => $username, "password" => $password));
+           $result = $r_table->values(array("username" => "bob", "password" => "df"));
            var_dump($result);
     
     

@@ -48,8 +48,10 @@ var_dump($_POST);
     <div class="login" data-toggle="deselect"></div>
 
     <div id="leftcolumn">
+        
 
     </div><div id="logincolumn">
+        <div id="message"></div>
         
 
 
@@ -61,9 +63,12 @@ var_dump($_POST);
                 </tr>                   
                 <tr>                       
                     <td>password :</td>
-                    <td><input class="blackinput" password="password" name="password" type="password"/></td>   
-                <div id="message"></div>
-                </tr>                    
+                    <td><input class="blackinput" password="password" name="password" type="password"/></td> 
+                    
+                
+                
+                </tr> 
+                
             </table>
 
 
@@ -92,8 +97,11 @@ var_dump($_POST);
                     <input class="loginbut" type="button" name="login" value="LOGIN"/>
 
                 </div>
+                
 
         </form>
+        
+        
 
 
 
