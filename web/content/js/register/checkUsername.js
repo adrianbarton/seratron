@@ -7,7 +7,7 @@ $(document).ready(function(){
  
               $.ajax({
                     type:"post",
-                    url:"checkUsername.php",
+                    url:"/component/register/checkUsername.php",
                     data:"username="+username,
                         success:function(data){
                         if(data==0){

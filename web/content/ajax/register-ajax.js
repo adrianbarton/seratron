@@ -6,7 +6,7 @@ $(document).ready(function() {
         var email = $('#email').val();
         $.ajax({
             type: "POST",
-            url: "register.php",
+            url: "/component/register/register.php",
             data: "username=" + username + "&password=" + password + "&confirm" + confirm + "&email=" + email,
             success: function(html) {
                 window.location.href = '../../index.php';

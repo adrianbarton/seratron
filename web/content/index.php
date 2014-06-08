@@ -3,10 +3,10 @@ include'modules/header.php';
 
 ?>
 
-<script src="/component/register/checkUsername.js"></script>
-<script src="/component/register/passwordStrength.js"></script>
-<script src="/component/register/passwordMatch.js"></script>
-<script src="/component/register/ajax.js"></script>
+<script src="/js/register/checkUsername.js"></script>
+<script src="/js/register/passwordStrength.js"></script>
+<script src="/js/register/passwordMatch.js"></script>
+<script src="/ajax/register-ajax.js"></script>
 
     
     <div id="homemainwindow">
