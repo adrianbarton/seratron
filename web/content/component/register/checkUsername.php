@@ -1,4 +1,5 @@
 <?php
+
  require_once '/lib/db.php';
  
  $database = new read('seratron', 'users');
@@ -11,4 +12,4 @@
  
   echo $find;
   
-?>
+ ?>
