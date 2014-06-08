@@ -6,6 +6,7 @@ if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['passwor
     $function = new functions();
 
     $function->register($_POST['username'], $_POST['email'], $_POST['password']);
+    
 }
 ?>
 <script src="/js/register.js"></script>

@@ -99,8 +99,8 @@ class insert extends db {
         }
         $this->query = "INSERT INTO `" . $this->table . "`(" . implode(',', array_keys($this->keys)) . ") VALUES (" . implode(',', array_values($this->values)) . ")";
         $this->result = mysqli_query($this->connect, $this->query);
-    }
-
+        
+        }
 }
 
 class update extends db {

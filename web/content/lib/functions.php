@@ -69,10 +69,21 @@ class functions {
     }
 
     function register($username, $email, $password) {
+        
 
         $insert = new insert('seratron', 'users');
-        $insert->values(array('username' => $_POST['username'], 'email' => $_POST['email'], 'password' => $_POST['password']));
+        $insert = $insert->values(array('username' => $_POST['username'], 'email' => $_POST['email'], 'password' => $_POST['password']));
+
+        if($insert != NULL){
+            echo "You have been sent a validation email";
+        }else{
+            echo "Not inserted";
+        }
+        
+        
     }
+    
+    
 
 }
 
