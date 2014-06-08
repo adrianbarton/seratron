@@ -8,7 +8,7 @@ include'../../modules/header.php';
 <div id="mainwindow">
 
     <?php
-     $r_table = new read("seratron", "users");
+     $r_table = new insert("seratron", "users");
            $result = $r_table->values(array("username" => "bob", "password" => "df"));
            var_dump($result);
     

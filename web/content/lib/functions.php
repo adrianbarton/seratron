@@ -1,9 +1,8 @@
 <?php
 
-$filepath = realpath (dirname(__FILE__));
+$filepath = realpath(dirname(__FILE__));
 
-require_once($filepath."/db.php");
-
+require_once($filepath . "/db.php");
 
 //$db = new db();
 //
@@ -11,7 +10,7 @@ require_once($filepath."/db.php");
 //$db->select_db();
 
 class functions {
-    
+
 //    public $username;
 //    private $password;
 //
@@ -37,8 +36,8 @@ class functions {
 //            return ERROR_MSG;
 //        }
 //    }
-    
-    
+
+
 
     function log_in($username, $password) {
 
@@ -46,35 +45,35 @@ class functions {
             echo json_encode(array("empty" => "System error: Username and Password not entered."));
         } else {
 
-           $r_table = new read("seratron", "users");
-           $result = $r_table->values(array("username" => $username, "password" => $password));
-           
+            $r_table = new read("seratron", "users");
+            $result = $r_table->values(array("username" => $username, "password" => $password));
+
 
             if ($result != NULL) {
                 session_start();
                 session_write_close();
-  
+
                 $w_table = new insert("seratron", "session");
                 $w_table->values(array(
-                    "id"=>"0", 
-                    "session_id"=>session_id(), 
-                    "user_id"=> $result[0]['id'], 
-                    "ip"=>$_SERVER['REMOTE_ADDR'], 
-                    "date_logged"=>date('y-m-d h:i:s')
-                    ));
-                        echo json_encode(array("valid"=>"true"));
+                    "id" => "0",
+                    "session_id" => session_id(),
+                    "user_id" => $result[0]['id'],
+                    "ip" => $_SERVER['REMOTE_ADDR'],
+                    "date_logged" => date('y-m-d h:i:s')
+                ));
+                echo json_encode(array("valid" => "true"));
             } else {
-                echo json_encode(array("invalid"=> "System error: Authentication failed."));
-                
+                echo json_encode(array("invalid" => "System error: Authentication failed."));
             }
         }
     }
 
-}
+    function register($username, $email, $password) {
 
-function register($username, $email, $password){
-    $insert= new insert('seratron', 'users');
-    $insert->values(array('username'=>$_POST['username'], 'email'=>$_POST['email'], 'password'=>$_POST['password']));
+        $insert = new insert('seratron', 'users');
+        $insert->values(array('username' => $_POST['username'], 'email' => $_POST['email'], 'password' => $_POST['password']));
+    }
+
 }
 
 ?>
