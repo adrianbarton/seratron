@@ -1,12 +1,13 @@
 <?php
+ require_once '/lib/db.php';
  
-  mysql_connect("localhost","root","");
-  mysql_select_db("seratron");
+ $database = new read('seratron', 'users');
  
   $username=$_POST["username"];
-  $query=mysql_query("SELECT * from users where username='$username'");
- 
-  $find=mysql_num_rows($query);
+  
+  $result = $database->values('username', $username);
+   
+  $find=mysql_num_rows($result);
  
   echo $find;
   
