@@ -43,7 +43,7 @@ class functions {
     function log_in($username, $password) {
 
         if ($username == "" || $password == "") {
-            echo json_encode(array("empty" => "Please enter a username and password"));
+            echo json_encode(array("empty" => "System error: Username and Password not entered."));
         } else {
 
            $r_table = new read("seratron", "users");
@@ -64,7 +64,7 @@ class functions {
                     ));
                         echo json_encode(array("valid"=>"true"));
             } else {
-                echo json_encode(array("invalid"=> "Invalid credentials"));
+                echo json_encode(array("invalid"=> "System error: Authentication failed."));
                 
             }
         }
