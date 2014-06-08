@@ -1,9 +1,6 @@
-<?php
 
-?>
 
-<script src="/js/register/passwordStrength.js"></script>
-<script src="/js/register/passwordMatch.js"></script>
+<script src="/js/register.js"></script>
 <div id="register" data-reg="deselected">
 
     R<br/>E<br/>G<br/>I<br/>S<br/>T<br/>E<br/>R
