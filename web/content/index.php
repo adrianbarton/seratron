@@ -15,15 +15,15 @@ include'component/register/register.php';
         function processForm(formId) {
             $.post("ajax/login.php", $("#" + formId).serialize(), function(data) {
                 
-                if (typeof data.notEntered != "undefined") {
+                if (typeof data.empty != "undefined") {
                     $("#message").html(data.empty);
                 } else if (typeof data.invalid != "undefined") {
                     $("#message").html(data.invalid);
                 } else if (typeof data.valid != "undefined") {
                     window.location.href = '/overview';
                 }
-                console.log(data);
-            });
+                
+            }, 'json');
         }
 
         $('.loginbut').on("click", function() {
