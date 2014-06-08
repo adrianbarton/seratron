@@ -3,12 +3,15 @@ include'modules/header.php';
 
 ?>
 
+<script src="/component/register/checkUsername.js"></script>
+<script src="/component/register/passwordStrength.js"></script>
+<script src="/component/register/passwordMatch.js"></script>
+<script src="/component/register/ajax.js"></script>
+
     
     <div id="homemainwindow">
         
         <div id="leftcolumn">
-            
-            
             
         </div><div id="logincolumn">
             
@@ -81,6 +84,7 @@ include'modules/header.php';
 
                                     <td>username :</td>
                                     <td><input type="text" id="username" name="username"/></td>
+                                    <td><div id="usernameCheck"></div></td>
 
                                 </tr>
                                 <tr>
@@ -93,12 +97,14 @@ include'modules/header.php';
 
                                     <td >password :</td>
                                     <td><input type="password" id="password" name="password"/></td>
+                                    <td><div id="passwordStrengthCheck"></div></td>
 
                                 </tr>
                                 <tr>
 
                                     <td >confirm password :</td>
                                     <td><input type="password" id="confirm" name="confirm"/></td>
+                                    <td><div id="passwordMatchCheck"></div></td>
 
                                 </tr>
                                 <tr>

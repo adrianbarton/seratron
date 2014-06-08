@@ -9,14 +9,12 @@ $(document).ready(function() {
 {
         if (password === confirm) {
             $('#passwordMatchCheck').removeClass()
-            $('#passwordMatchCheck').addClass('match')
-            return 'Passwords Match'
+            $('#passwordMatchCheck').addClass('tick')
         }
         else
             {
                 $('#passwordMatchCheck').removeClass()
-                $('#passwordMatchCheck').addClass('nomatch')
-                return 'Passwords Do Not Match'
+                $('#passwordMatchCheck').addClass('cross')
             }
     }
 

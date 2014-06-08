@@ -342,3 +342,33 @@ body{
 .hidden{
     display:none;
 }
+
+.tick {  
+    height:20px;
+    width:20px;
+    background:url('/images/tick.png');
+}
+
+.cross{
+    height:20px;
+    width:20px;
+    background:url('/images/cross.png');
+}
+
+.weak{
+    height:20px;
+    width:20px;
+    background:#cc0000;
+}
+
+.good{
+    height:20px;
+    width:20px;
+    background:#ffff00;
+}
+
+.strong{
+    height:20px;
+    width:20px;
+    background:#33cc00;
+}

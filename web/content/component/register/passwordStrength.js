@@ -10,11 +10,11 @@ $(document).ready(function() {
         var strength = 0;
 
         if (password.length < 6) {
-            $('#passwordStrengthCheck').removeClass()
-            $('#passwordStrenghtCheck').addClass('short')
-            return 'Too short'
+            $('#passwordStrengthCheck').removeClass();
+            $('#passwordStrenghtCheck').addClass('short');
+            return  'short';
         }
-
+        
         if (password.length > 7)
             strength += 1
 
@@ -33,21 +33,21 @@ $(document).ready(function() {
 
         if (strength < 2)
             {
-                $('#passwordStrengthCheck').removeClass()
+                $('#passwordStrengthCheck').removeClass('')
                 $('#passwordStrengthCheck').addClass('weak')
-                return 'Weak'
+                return ''
             }
         else if (strength == 2)
             {
                 $('#passwordStrengthCheck').removeClass()
                 $('#passwordStrengthCheck').addClass('good')
-                return 'Good'
+                return ''
             }
         else
             {
                 $('#passwordStrengthCheck').removeClass()
                 $('#passwordStrengthCheck').addClass('strong')
-                return 'Strong'
+                return ''
             }
     }
 });
