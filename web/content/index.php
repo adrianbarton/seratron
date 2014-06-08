@@ -11,7 +11,6 @@ include'lib/db.php'
 include'component/register/register.php';
 ?>
 
-    
     <div id="homemainwindow">
         
         <div id="leftcolumn">
