@@ -1,13 +1,9 @@
 <?php
-
-$query=mysql_connect("cust-mysql-123-19","seratron","1989password!");
-mysql_select_db("seratron",$query);
-if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email']))
+$connect=new insert("seratron", "users");
+if(isset($_POST['username']) && isset($_POST['password']))
 {
-$username=mysql_real_escape_string($_POST['username']);
-$password=mysql_real_escape_string($_POST['password']);
-$email=$_POST['email'];
-$query2=mysql_query("insert into users values('','$username','$password','$email')");
+$connect->values(array('username'=>$_POST['username'], 'password'=>$_POST['password']));
+var_dump($connect);
 if($query2)
 {
 echo "<h2>Your Registration Process succesfully completed. Thank You</h2>";

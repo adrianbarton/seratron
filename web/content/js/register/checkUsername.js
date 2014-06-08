@@ -10,7 +10,7 @@ $(document).ready(function(){
                     url:"/component/register/checkUsername.php",
                     data:"username="+username,
                         success:function(data){
-                        if(data==0){
+                        if(data===0){
                             $("#usernameCheck").addClass("<img src='/images/tick.png' />");
                             
                         }
