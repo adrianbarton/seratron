@@ -17,7 +17,7 @@
             <table class="logintable">                   
                 <tr>     
                     <td>username:</td>
-                    <td><input class="blackinput" id="username" name="username" type="text"/></td>                       
+                    <td><input class="blackinput" id="login-username" name="username" type="text"/></td>                       
                 </tr>                   
                 <tr>                       
                     <td>password :</td>

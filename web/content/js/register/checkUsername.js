@@ -3,8 +3,8 @@ $(document).ready(function(){
                  $("#usernameCheck").html("checking...");
              
  
-            var username=$("#username").val();
- 
+          var username=$("#reg-username").val();
+ alert(username);
               $.ajax({
                     type:"post",
                     url:"/component/register/checkUsername.php",

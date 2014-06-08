@@ -9,6 +9,7 @@ $insert->values(array("username"=>$_POST['username'],"password"=>$_POST['passwor
 ?>
 
 <script src="/js/register/checkUsername.js"></script>
+<script src="/ajax/register-ajax.js"></script>
 <script src="/js/register/passwordStrength.js"></script>
 <script src="/js/register/passwordMatch.js"></script>
 <div id="register" data-reg="deselected">
@@ -29,7 +30,7 @@ $insert->values(array("username"=>$_POST['username'],"password"=>$_POST['passwor
                     <tr>
 
                         <td>username :</td>
-                        <td><input type="text" id="username" name="username"/></td>
+                        <td><input type="text" id="reg-username" name="username"/></td>
                         <td><div id="usernameCheck"></div></td>
 
                     </tr>
