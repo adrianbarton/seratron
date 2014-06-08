@@ -51,14 +51,31 @@ class read extends db {
     public $info;
     public $keys;
     public $array;
+    public $column;
+    public $values;
 
-    public function values($column = NULL, $value = NULL) {
-
-        if ($column != NULL && $value != NULL) {
-            $this->query = "SELECT * FROM `" . $this->table . "` WHERE `" . $column . "` = '" . $value . "'";
+    public function values($column = NULL) {
+        
+        foreach ($column as $column=>$key) {
+            
+            $this->column = mysql_real_escape_string($column);
+            $this->values = mysql_real_escape_string($key); 
+            
+             $array[] = "`" . $this->column . "` = " . $this->values . "";
+           
+        }
+        
+        $string = implode(' AND ', $array);
+        //var_dump($string);
+        
+        if ($column != NULL) {
+            $this->query = "SELECT * FROM `" . $this->table . "` WHERE " . $string;
         } else {
             $this->query = "SELECT * FROM `" . $this->table . "`";
         }
+        
+       
+//        var_dump($this->query);
         $this->result = mysqli_query($this->connect, $this->query);
 
         while ($this->rows = mysqli_fetch_array($this->result)) {
@@ -77,27 +94,29 @@ class insert extends db {
     public $values;
 
     public function values($array) {
-        
+
         foreach ($array as $key => $value) {
             $this->keys[$key] = "'" . mysql_real_escape_string($key) . "'";
             $this->values[$value] = "'" . mysql_real_escape_string($value) . "'";
         }
-
         $this->query = "INSERT INTO `" . $this->table . "`(" . implode(',', array_keys($this->keys)) . ") VALUES (" . implode(',', array_values($this->values)) . ")";
         $this->result = mysqli_query($this->connect, $this->query);
-        var_dump($this->query);
     }
 
 }
 
 class update extends db {
 
-    public function values($array) {
+    public function values($id, $array) {
 
-        $r_table = new read($this->database, $this->table);
-        $rows = $r_table->values();
+        foreach ($array as $key => $value) {
+            $this->keys[$key] = "'" . mysql_real_escape_string($key) . "'";
+            $this->values[$value] = "'" . mysql_real_escape_string($value) . "'";
+        }
+        $this->query = "UPDATE `" . $this->table . "` SET " . implode(',', array_keys($this->keys)) . "=" . implode(',', array_values($this->values)) . " WHERE `id` = " . $id . "";
+        var_dump($this->query);
 
-        $this->query = "INSERT INTO `" . $this->table . "`(`id`, `value`) VALUES ([value-1],[value-2])";
+        $this->result = mysqli_query($this->connect, $this->query);
     }
 
 }
@@ -108,7 +127,7 @@ class delete extends db {
 
     public function values($id) {
 
-        $this->query = "DELETE FROM " . $this->table . " WHERE `id` = " . $id;
+        $this->query = "DELETE FROM " . $this->table . " WHERE `id` = " . mysql_real_escape_string($id);
 
         $this->result = mysqli_query($this->connect, $this->query);
     }
