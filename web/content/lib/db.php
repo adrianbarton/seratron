@@ -40,19 +40,79 @@ class db {
             
         }
     }
+
 }
-class readtable extends db {
+
+class read extends db {
 
     public $query;
     public $result;
+    public $rows;
+    public $info;
+    public $keys;
+    public $array;
 
-    public function values($id, $value) {
+    public function values($column = NULL, $value = NULL) {
 
-        $this->query = "SELECT * FROM `" . $this->table . "` WHERE `" . $id . "` = '" . $value . "'";
-        $result = mysqli_query($this->connect, $this->query);
-        while ($row = mysqli_fetch_array($result)) {
-            return $row;
+        if ($column != NULL && $value != NULL) {
+            $this->query = "SELECT * FROM `" . $this->table . "` WHERE `" . $column . "` = '" . $value . "'";
+        } else {
+            $this->query = "SELECT * FROM `" . $this->table . "`";
         }
+        $this->result = mysqli_query($this->connect, $this->query);
+
+        while ($this->rows = mysqli_fetch_array($this->result)) {
+            $this->array[] = $this->rows;
+        }
+        return $this->array;
     }
+
 }
+
+class insert extends db {
+
+    public $query;
+    public $keys;
+    public $result;
+    public $values;
+
+    public function values($array) {
+        
+        foreach ($array as $key => $value) {
+            $this->keys[$key] = "'" . mysql_real_escape_string($key) . "'";
+            $this->values[$value] = "'" . mysql_real_escape_string($value) . "'";
+        }
+
+        $this->query = "INSERT INTO `" . $this->table . "`(" . implode(',', array_keys($this->keys)) . ") VALUES (" . implode(',', array_values($this->values)) . ")";
+        $this->result = mysqli_query($this->connect, $this->query);
+        var_dump($this->query);
+    }
+
+}
+
+class update extends db {
+
+    public function values($array) {
+
+        $r_table = new read($this->database, $this->table);
+        $rows = $r_table->values();
+
+        $this->query = "INSERT INTO `" . $this->table . "`(`id`, `value`) VALUES ([value-1],[value-2])";
+    }
+
+}
+
+class delete extends db {
+
+    public $id;
+
+    public function values($id) {
+
+        $this->query = "DELETE FROM " . $this->table . " WHERE `id` = " . $id;
+
+        $this->result = mysqli_query($this->connect, $this->query);
+    }
+
+}
+
 ?>

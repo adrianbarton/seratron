@@ -1,4 +1,5 @@
-<?php include '../../lib/db.php';
+<?php
+include '../../lib/db.php';
 include'../../modules/header.php';
 ?>
 <?php include'../../modules/fixedmenutop.php' ?>
@@ -6,12 +7,11 @@ include'../../modules/header.php';
 
 <div id="mainwindow">
 
-<?php 
-$r_table = new readtable("seratron", "users");
-$result = $r_table->values("id", "1");
+    <?php
+    $r_table = new insert("seratron", "users");
+    $insert = $r_table->values(array("value" => "199", "age" => "0", "password" => "testing"));
 
-echo $result['id'];
-?>
+    ?>
 
 
 
