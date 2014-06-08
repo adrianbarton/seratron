@@ -8,9 +8,9 @@ include'../../modules/header.php';
 <div id="mainwindow">
 
     <?php
-    $r_table = new update("seratron", "users");
-    $insert = $r_table->values("3", array( "age"=>"1000", "value"=>"15"));
-    //var_dump($insert);
+     $r_table = new read("seratron", "users");
+           $result = $r_table->values(array("username" => $username, "password" => $password));
+           var_dump($result);
     
     
    

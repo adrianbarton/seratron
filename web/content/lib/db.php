@@ -1,6 +1,6 @@
 <?php
 
-require_once "constants.php";
+include "constants.php";
 
 class db {
 
@@ -61,7 +61,7 @@ class read extends db {
             $this->column = mysql_real_escape_string($column);
             $this->values = mysql_real_escape_string($key);
 
-            $array[] = "`" . $this->column . "` = " . $this->values . "";
+            $array[] = "`" . $this->column . "` = '" . $this->values . "'";
         }
 
         $string = implode(' AND ', $array);
@@ -73,10 +73,14 @@ class read extends db {
         }
         $this->result = mysqli_query($this->connect, $this->query);
 
-        while ($this->rows = mysqli_fetch_array($this->result)) {
-            $this->array[] = $this->rows;
+        if ($this->result === false) {
+            echo mysql_error();
+        } else {
+            while ($this->rows = mysqli_fetch_array($this->result)) {
+                $this->array[] = $this->rows;
+            }
+            return $this->array;
         }
-        return $this->array;
     }
 
 }
@@ -110,9 +114,8 @@ class update extends db {
             $this->value = mysql_real_escape_string($value);
 
             $this->array[] = $this->keys . ' = "' . $this->value . '"';
-            
         }
-        
+
         $this->string = implode(', ', $this->array);
 
         $this->query = "UPDATE  `" . $this->table . "` SET " . $this->string . " WHERE id = " . $id;
