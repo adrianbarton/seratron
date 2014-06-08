@@ -1,5 +1,11 @@
 
+<?php include'/lib/functions.php';
+if(isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password'])){
+    $function= new functions();
 
+$function->register($_POST['username'], $_POST['email'], $_POST['password']);
+}
+?>
 <script src="/js/register.js"></script>
 <div id="register" data-reg="deselected">
 
@@ -19,7 +25,7 @@
                 <tr>
 
                     <td>username :</td>
-                    <td><input type="text" id="reg-username" name="username"/></td>
+                    <td><input type="text" id="reg-username" name="username" maxlength="16"/></td>
                     <td><div id="usernameCheck"></div></td>
 
                 </tr>
