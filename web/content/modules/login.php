@@ -1,6 +1,7 @@
 <?php
 
 ?>
+<script src="/js/login.js"></script>
 
 <div class="login" data-toggle="deselect"></div>
 
