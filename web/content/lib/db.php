@@ -55,27 +55,22 @@ class read extends db {
     public $values;
 
     public function values($column = NULL) {
-        
-        foreach ($column as $column=>$key) {
-            
+
+        foreach ($column as $column => $key) {
+
             $this->column = mysql_real_escape_string($column);
-            $this->values = mysql_real_escape_string($key); 
-            
-             $array[] = "`" . $this->column . "` = " . $this->values . "";
-           
+            $this->values = mysql_real_escape_string($key);
+
+            $array[] = "`" . $this->column . "` = " . $this->values . "";
         }
-        
+
         $string = implode(' AND ', $array);
-        //var_dump($string);
-        
+
         if ($column != NULL) {
             $this->query = "SELECT * FROM `" . $this->table . "` WHERE " . $string;
         } else {
             $this->query = "SELECT * FROM `" . $this->table . "`";
         }
-        
-       
-//        var_dump($this->query);
         $this->result = mysqli_query($this->connect, $this->query);
 
         while ($this->rows = mysqli_fetch_array($this->result)) {
@@ -110,9 +105,18 @@ class update extends db {
     public function values($id, $array) {
 
         foreach ($array as $key => $value) {
-            $this->keys[$key] = "'" . mysql_real_escape_string($key) . "'";
-            $this->values[$value] = "'" . mysql_real_escape_string($value) . "'";
+            $this->keys = mysql_real_escape_string($key);
+            $this->values = mysql_real_escape_string($value);
+            
+            $array[] = "`" . $this->column . "` = " . $this->values . "";
+            
+            
         }
+        
+        $string = implode(' AND ', $array);
+        
+        $this->query = "UPDATE  `" . $this->table . "` SET " . $string . "` WHERE id = " . $id;
+        
         $this->query = "UPDATE `" . $this->table . "` SET " . implode(',', array_keys($this->keys)) . "=" . implode(',', array_values($this->values)) . " WHERE `id` = " . $id . "";
         var_dump($this->query);
 
