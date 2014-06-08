@@ -1,6 +1,6 @@
 <?php
 
-$query=mysql_connect("localhost","root","");
+$query=mysql_connect("cust-mysql-123-19","seratron","1989password!");
 mysql_select_db("seratron",$query);
 if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email']))
 {
