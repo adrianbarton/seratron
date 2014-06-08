@@ -30,7 +30,7 @@
                 } else if (typeof data.invalid != "undefined") {
                     $("#message").html(data.invalid);
                 } else if (typeof data.valid != "undefined") {
-                    window.location.href = '/overview';
+                    window.location.href = '/component/loginhome';
                 }
                 
             }, 'json');

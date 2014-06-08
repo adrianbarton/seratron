@@ -30,8 +30,8 @@ class db {
         if (!$this->connect) {
             exit('Error: could not establish database connection');
         }
-        $this->database = $database;
-        $this->table = $table;
+        $this->database = mysql_real_escape_string($database);
+        $this->table = mysql_real_escape_string($table);
 
         $this->selected = mysqli_select_db($this->connect, $this->database);
         if (!$this->selected) {
@@ -118,7 +118,7 @@ class update extends db {
 
         $this->string = implode(', ', $this->array);
 
-        $this->query = "UPDATE  `" . $this->table . "` SET " . $this->string . " WHERE id = " . $id;
+        $this->query = "UPDATE  `" . $this->table . "` SET " . $this->string . " WHERE id = " . mysql_real_escape_string($id);
 
         $this->result = mysqli_query($this->connect, $this->query);
     }

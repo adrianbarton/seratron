@@ -14,7 +14,6 @@ include'lib/db.php';
 
 </div>
 
-
 </body>
 
 </html>
