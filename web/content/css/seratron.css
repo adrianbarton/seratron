@@ -266,7 +266,7 @@ body{
     left: 58px;
 }
 
-#logincolumn input[type=text],#logincolumn input[type=password] {
+#logincolumn input[type=text],#logincolumn input[type=password], #logincolumn input[type=email] {
     background:rgba(160,160,160,0.4);
     color:#fff;
     border:none;

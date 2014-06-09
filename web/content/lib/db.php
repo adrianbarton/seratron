@@ -18,7 +18,7 @@ class db {
 
             $this->server = 'cust-mysql-123-19';
             $this->username = 'seratron';
-            $this->password = '1989password!';
+            $this->password = 'seratron1989!';
         } else {
 
             $this->server = 'localhost';
